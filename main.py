@@ -22,6 +22,10 @@ screen.onkeypress(snake.left, "Left")
 screen.onkeypress(snake.right, "Right")
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0530d7b... Initial commit
 game_is_on = True
 while game_is_on:
     screen.update()
@@ -36,12 +40,23 @@ while game_is_on:
 
 #  detecting collision with wall
     if snake.head.xcor() > 280 or snake.head.xcor() < -300 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+<<<<<<< HEAD
         game_is_on = False
         score.game_over()
+=======
+        score.reset()
+        snake.reset()
+>>>>>>> 0530d7b... Initial commit
 
 # detecting collision with tail
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
+<<<<<<< HEAD
             game_is_on = False
             score.game_over()
+=======
+            score.reset()
+            snake.reset()
+
+>>>>>>> 0530d7b... Initial commit
 screen.exitonclick()
